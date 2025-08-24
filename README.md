@@ -147,8 +147,14 @@ trainer.learn(
 ```
 
 <div align="center">
-  <video src="docs/video.mp4" controls></video>
+  <video width="1000" controls>
+    <source src="docs/video.mp4" type="video/mp4">
+    Seu browser não suporta vídeos HTML5.
+  </video>
 </div>
+
+[![Watch the video](https://i.sstatic.net/Vp2cE.png)](https://youtu.be/vt5fpE0bzSY)
+
 
 
 ### Parallel Training
