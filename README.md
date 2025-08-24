@@ -158,38 +158,6 @@ trainer.learn(
 )
 ```
 
-## ROS Integration
-
-The framework includes ROS (Robot Operating System) integration for real-world deployment:
-
-### Features
-- TurtleBot3 support
-- Gazebo simulation integration
-- Real-world robot deployment
-- SLAM (Simultaneous Localization and Mapping)
-- Navigation stack integration
-
-### ROS Workspace Structure
-```
-ros/
-├── Dockerfile
-├── docker-compose.yaml
-└── tb3_ws/
-    ├── src/playground/
-    │   ├── launch/           # Launch files
-    │   ├── maps/            # Environment maps
-    │   ├── models/          # Trained models
-    │   └── worlds/          # Gazebo worlds
-    └── Makefile
-```
-
-### Running ROS Simulation
-```bash
-cd ros/tb3_ws
-make build
-make run
-```
-
 ## Troubleshooting
 
 ### Common Issues
