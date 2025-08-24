@@ -17,7 +17,7 @@
 ## Demo
 
 <div align="center">
-  <img src="docs/demo.gif" alt="RNL Framework Demo" width="600">
+  <img src="docs/demo.gif" alt="RNL Framework Demo" width="1000">
 </div>
 
 ## Key Features
