@@ -147,7 +147,7 @@ trainer.learn(
 ```
 
 <div align="center">
-  <img src="docs/video.gif" alt="RNL LLM" width="600">
+  <img src="docs/video.gif" alt="RNL LLM" width="1000">
 </div>
 
 
