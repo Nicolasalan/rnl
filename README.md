@@ -81,7 +81,7 @@ env_config = vault.make(
 
 # Configure rendering
 render_config = vault.render(
-    controller=False,        # Disable manual control (set True to control robot with arrow keys)
+    controller=False,       # Disable manual control (set True to control robot with arrow keys)
     debug=True,             # Enable debug visualization
     plot=False              # Disable plotting
 )

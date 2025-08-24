@@ -14,7 +14,7 @@ def main(arg):
         weight=1.0,
         threshold=0.1,
         collision=0.05,
-        path_model="/Users/nicolasalan/Downloads/rnl/checkpoints/model_190000_steps.zip",
+        path_model="",
     )
 
     # 2.step -> config sensors [for now only lidar sensor!!]
@@ -28,12 +28,12 @@ def main(arg):
     # 3.step -> config env
     param_env = vault.make(
         scalar=12,
-        folder_map="/Users/nicolasalan/Downloads/rnl/map",
+        folder_map="/Users/nicolasalan/Documents/rnl/map",
         name_map="map",
         max_timestep=1000,
     )
     # 4.step -> config render
-    param_render = vault.render(controller=False, debug=True, plot=False)
+    param_render = vault.render(controller=True, debug=True, plot=False)
 
     if args.mode == "learn":
         # 5.step -> config train robot
@@ -59,7 +59,7 @@ def main(arg):
             device="mps",
             checkpoint=10000,
             checkpoint_path="checkpoints",
-            use_wandb=True,
+            use_wandb=False,
             wandb_api_key=str(wandb_key),
             llm_api_key=str(gemini_api_key),
             lr=1e-5,
@@ -83,6 +83,7 @@ def main(arg):
 
 
 if __name__ == "__main__":
+    print("run ...")
     parser = argparse.ArgumentParser(description="Train or setup environment.")
     parser.add_argument("mode", choices=["learn", "sim"], help="Mode")
 

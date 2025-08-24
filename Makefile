@@ -1,30 +1,3 @@
-# Documentation commands
-.PHONY: docs-install docs-build docs-serve docs-check docs
-
-# Install documentation dependencies
-docs-install:
-	@echo "Installing documentation dependencies..."
-	@uv pip install -r docs/requirements.txt
-	# Alternative with pip: pip install -r docs/requirements.txt
-
-# Build documentation
-docs-build:
-	@echo "Building documentation..."
-	@mkdocs build --clean
-
-# Serve documentation locally
-docs-serve:
-	@echo "Serving documentation at http://localhost:8000"
-	@mkdocs serve
-
-# Check documentation for issues
-docs-check:
-	@echo "Checking documentation for issues..."
-	@mkdocs build --strict
-
-# Combined target for quick builds and serving
-docs: docs-install docs-build docs-serve
-
 IMAGE_NAME   = rnl-docker-cuda
 TAG          = latest
 IMAGE        = $(IMAGE_NAME):$(TAG)
@@ -144,11 +117,7 @@ endef
 
 .PHONY: sim
 sim:
-	@uv run python -m main sim \
-	    --controller $(CONTROL) \
-    	--scalar $(SCALAR) \
-    	--type $(TYPE) \
-		--debug True
+	@uv run python -m main sim
 
 .PHONY: learn
 learn:
@@ -235,10 +204,10 @@ push:
 	@docker tag $(IMAGE_NAME):$(VERSION) $(IMAGE_NAME):latest
 	@docker push $(IMAGE_NAME):latest
 
-UV     = uv
-BLACK  = $(UV) run black
-ISORT  = $(UV) run isort
-RUFF   = $(UV) run ruff
+uv     = uv
+BLACK  = $(uv) run black
+ISORT  = $(uv) run isort
+RUFF   = $(uv) run ruff
 SRC_DIR= ./
 
 .PHONY: lint
