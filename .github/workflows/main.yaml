@@ -27,11 +27,6 @@ jobs:
       - name: Install dependencies
         run: make install_with_dev
 
-      - name: Upload coverage to Codecov
-        uses: codecov/codecov-action@v3
-        with:
-          token: ${{ secrets.CODECOV_TOKEN }}
-
   Build-MacOS:
     runs-on: macos-latest
     steps:
@@ -51,11 +46,6 @@ jobs:
 
       - name: Install dependencies
         run: make install_with_dev
-
-      - name: Upload coverage to Codecov
-        uses: codecov/codecov-action@v3
-        with:
-          token: ${{ secrets.CODECOV_TOKEN }}
 
   Build-Windows:
     runs-on: windows-latest
@@ -78,8 +68,3 @@ jobs:
 
       - name: Install dependencies
         run: make install_with_dev
-
-      - name: Upload coverage to Codecov
-        uses: codecov/codecov-action@v3
-        with:
-          token: ${{ secrets.CODECOV_TOKEN }}

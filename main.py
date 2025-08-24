@@ -33,7 +33,7 @@ def main(arg):
         max_timestep=1000,
     )
     # 4.step -> config render
-    param_render = vault.render(controller=True, debug=True, plot=False)
+    param_render = vault.render(controller=False, debug=True, plot=False)
 
     if args.mode == "learn":
         # 5.step -> config train robot
@@ -46,16 +46,16 @@ def main(arg):
 
         # 6.step -> train robot
         model.learn(
-            population=0,
-            loop_feedback=0,
+            population=2,
+            loop_feedback=10,
             description_task="reach the goal without crashing",
             pretrained="",
-            use_llm=False,
-            max_timestep_global=5_000_000,
+            use_llm=True,
+            max_timestep_global=10_000,
             seed=1,
             batch_size=1024,
             hidden_size=128,
-            num_envs=16,
+            num_envs=8,
             device="mps",
             checkpoint=10000,
             checkpoint_path="checkpoints",

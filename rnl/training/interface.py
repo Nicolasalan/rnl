@@ -202,6 +202,8 @@ class Trainer:
             raise ValueError("Error: Plot mode is not supported for training.")
         if self.render_config.controller:
             raise ValueError("Error: Controller mode is not supported for training.")
+        if not self.render_config.debug:
+            raise ValueError("Error: Debug mode needs to be enabled")
 
         reward_config = RewardConfig(
             params={

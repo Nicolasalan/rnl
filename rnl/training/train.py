@@ -12,7 +12,6 @@ def train_worker(
     env_config,
     render_config,
     trainer_config,
-    network_config,
     reward_config,
 ):
     metrics = training(
@@ -21,7 +20,6 @@ def train_worker(
         env_config,
         render_config,
         trainer_config,
-        network_config,
         reward_config,
         print_parameter=False,
     )
@@ -42,7 +40,6 @@ def run_parallel_trainings(list_of_configs):
                 cfg["env_config"],
                 cfg["render_config"],
                 cfg["trainer_config"],
-                cfg["network_config"],
                 cfg["reward_config"],
             )
             async_results.append(pool.apply_async(train_worker, args))
@@ -143,7 +140,6 @@ def run_multiple_parallel_trainings(
                     "env_config": cfg["env_config"],
                     "render_config": cfg["render_config"],
                     "trainer_config": cfg["trainer_config"],
-                    "network_config": cfg["network_config"],
                     "reward_config": updated_reward,
                 }
                 new_configs.append(new_cfg)
