@@ -146,7 +146,8 @@ trainer.learn(
 )
 ```
 
-[![RNL LLM](https://img.youtube.com/vi/Dcp-jNIVj3A/maxresdefault.jpg)](https://www.youtube.com/watch?v=BxKXpVthPg8)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/BxKXpVthPg8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 
 ### Parallel Training
 The framework supports multi-environment parallel training for faster convergence:
