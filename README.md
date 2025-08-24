@@ -146,10 +146,9 @@ trainer.learn(
 )
 ```
 
-<div align="center">
-  <img src="docs/video.mp4" alt="RNL - LLM" width="1000">
-</div>
-
+<video width="800" controls>
+  <source src="docs/video.mp4" type="video/mp4">
+</video>
 
 ### Parallel Training
 The framework supports multi-environment parallel training for faster convergence:
