@@ -146,9 +146,7 @@ trainer.learn(
 )
 ```
 
-<div align="center">
-  <img src="docs/video.gif" alt="RNL LLM" width="1000">
-</div>
+[![RNL LLM](https://img.youtube.com/vi/Dcp-jNIVj3A/maxresdefault.jpg)](https://www.youtube.com/watch?v=Dcp-jNIVj3A)
 
 ### Parallel Training
 The framework supports multi-environment parallel training for faster convergence:
