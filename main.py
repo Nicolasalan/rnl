@@ -30,7 +30,7 @@ def main(arg):
         scalar=12,
         folder_map="/Users/nicolasalan/Documents/rnl/map",
         name_map="map",
-        max_timestep=1000,
+        max_timestep=500,
     )
     # 4.step -> config render
     param_render = vault.render(controller=False, debug=True, plot=False)
@@ -51,10 +51,10 @@ def main(arg):
             description_task="reach the goal without crashing",
             pretrained="",
             use_llm=True,
-            max_timestep_global=10_000,
+            max_timestep_global=1_000,
             seed=1,
-            batch_size=1024,
-            hidden_size=128,
+            batch_size=8,
+            hidden_size=64,
             num_envs=8,
             device="mps",
             checkpoint=10000,

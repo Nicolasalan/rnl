@@ -146,6 +146,10 @@ trainer.learn(
 )
 ```
 
+<div align="center">
+  <img src="docs/video.gif" alt="RNL LLM" width="600">
+</div>
+
 
 ### Parallel Training
 The framework supports multi-environment parallel training for faster convergence:
@@ -157,23 +161,6 @@ trainer.learn(
     batch_size=2048          # Larger batch size for parallel training
 )
 ```
-
-## Troubleshooting
-
-### Common Issues
-
-1. **CUDA Out of Memory**
-   - Reduce `batch_size` or `num_envs`
-   - Use smaller `hidden_size`
-
-2. **Slow Training**
-   - Increase `num_envs` for parallel training
-   - Use GPU acceleration
-   - Optimize `learn_step` parameter
-
-3. **Unstable Training**
-   - Adjust learning rate (`lr`)
-   - Increase `update_epochs`
 
 ## Contributing
 

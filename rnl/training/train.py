@@ -186,24 +186,24 @@ def print_training_results_formatted(all_results):
 
 
 def print_new_configs(configs):
-    print("\n=== Resumo das Novas Configurações ===")
+    print("\n=== Summary of New Configurations ===")
     for idx, cfg in enumerate(configs, start=1):
         reward = cfg["reward_config"].params
         print(
-            f"População {idx}: "
+            f"Population {idx}: "
             f"Reward -> (Ori: {reward['scale_orientation']:.4f}, Dist: {reward['scale_distance']:.4f}, "
             f"Time: {reward['scale_time']:.4f}, Angular: {reward['scale_angular']:.4f}, Obst: {reward['scale_obstacle']:.4f}), "
         )
 
 
 def print_population_metrics(population_summaries):
-    print("\n=== Métricas das Populações ===")
+    print("\n=== Population Metrics ===")
     for i, pop in enumerate(population_summaries):
         print(
-            f"População {i+1}: "
-            f"Sucesso = {pop['success_percentage']}%, "
-            f"Inseguro = {pop['percentage_unsafe']}%, "
-            f"Vel Angular = {pop['percentage_angular']}%, "
+            f"Population {i+1}: "
+            f"Success = {pop['success_percentage']}%, "
+            f"Unsafe = {pop['percentage_unsafe']}%, "
+            f"Angular Vel = {pop['percentage_angular']}%, "
             f"Collisions = {pop['avg_collision_steps']:.2f}, "
             f"Goal Steps = {pop['avg_goal_steps']:.2f}"
         )
