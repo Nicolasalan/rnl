@@ -1,4 +1,4 @@
-# RNL: Robot Navigation Learning Framework
+# RNL: Robotic Next Learning Framework
 
 <p align="center">
   <a href="https://pypi.org/project/rnl/"><img alt="PyPI" src="https://img.shields.io/pypi/v/rnl"></a>
